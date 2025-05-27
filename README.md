@@ -73,7 +73,7 @@ proyecto/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/usuario/proyecto-carro.git
+git clone https://github.com/Nvch0/IntegracionNuevoWebpay
 cd proyecto-carro
 ```
 
