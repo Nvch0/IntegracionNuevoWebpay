@@ -1,6 +1,6 @@
 # Ferre+ Comercial S.A.
 
-Bienvenido al repositorio del proyecto Ferre+ Comercial S.A. Este proyecto es una aplicación web para la gestión de una ferretería, incluyendo la integración con la API de Mercado Libre.
+Bienvenido al repositorio del proyecto Ferre+ Comercial S.A. Este proyecto es una aplicación web para la gestión de una ferretería, incluyendo pagos de Transbank.
 
 ## Índice
 
@@ -22,18 +22,17 @@ Ferre+ Comercial S.A. es una aplicación web diseñada para gestionar inventario
 - MySQL
 - Git
 
-## Instalación
+# Instalación
 
 Sigue los siguientes pasos para instalar y configurar el proyecto en tu máquina local.
 
 ### Clonar el repositorio
-
 ```bash
-git clone 
-cd ferre-plus-comercial```
+git clone https://github.com/Nvch0/IntegracionNuevoWebpay`
 
-### Crear un entorno virtual
-
-```bash
-python -m venv env
-source env/bin/activate  # En Windows usa `env\Scripts\activate`
+ejecutar pip install -r .\requieriments.txt
+Iniciar xampp --> MySql
+En MySql ejecutar los 3 script categoria, marca, producto.
+ejecutar python manage.py makemigrations
+ejecutar python manage.py migrate
+py manage.py runserver
