@@ -40,10 +40,10 @@ def carro(http_request):
 def test_agregar_producto(carro, producto):
     carro.agregar(producto)
     assert producto.id in carro.carro
-    assert carro.carro[producto.id]['cantidad'] == 1
+    assert carro.carro[producto.id]['cantidad'] == 1 ##OK
 
 @pytest.mark.django_db
-def test_agregar_mismo_producto(carro, producto):
+def test_agregar_mismo_producto(carro, producto):  #NOK
     carro.agregar(producto)
     carro.agregar(producto)
     assert producto.id in carro.carro
@@ -58,7 +58,7 @@ def test_restar_producto(carro, producto):
     assert carro.carro[producto.id]['cantidad'] == 1
 
 @pytest.mark.django_db
-def test_restar_producto_hasta_eliminar(carro, producto):
+def test_restar_producto_hasta_eliminar(carro, producto): #OKNOTDATA
     carro.agregar(producto)
     carro.restar_producto(producto)
     carro.restar_producto(producto)
@@ -75,5 +75,3 @@ def test_eliminar_producto(carro, producto):
 #     carro.agregar(producto)
 #     carro.limpiar_carro()
 #     assert carro.carro == {}
-
-# NOSE PORQUE NO FUNCIONA ESTA MIERDAAAAAAAAAAAAAAAA
